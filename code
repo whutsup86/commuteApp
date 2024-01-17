@@ -1,0 +1,123 @@
+from datetime import datetime
+import tkinter
+
+# f = open("list.txt",'w')
+# f.close()
+
+write =''
+
+date = datetime.today().date()
+weekday = datetime.today().weekday()
+strtime = datetime.today().strftime("%H:%M:%S")
+
+win = tkinter.Tk()
+win.title("Commute App")
+win.geometry("500x400")
+# win.resizable(False,False)
+
+frame1=tkinter.Frame(win,width=200,height=300,relief="solid",bd=2)
+frame1.place(x=0,y=0)
+
+frame2=tkinter.Frame(win,width=200,height=80,relief="solid",bd=2)
+frame2.place(x=250,y=0)
+
+text2 = tkinter.Text(frame2, height=40, width=25)
+
+btn1 = tkinter.Button(frame1,text='Start',height=1,width=6)
+btn1.place(x=0,y=0)
+
+btn2 = tkinter.Button(frame1,text='Reset',height=1,width=6,fg='blue')
+btn2.place(x=100,y=0)
+
+btn3 = tkinter.Button(frame1,text='Leave',height=1,width=6)
+btn3.place(x=0,y=50)
+
+btn4 = tkinter.Button(frame1,text='Reset',height=1,width=6,fg='blue')
+btn4.place(x=100,y=50)
+
+btn5= tkinter.Button(frame1,text='Send',height=2,width=6,fg='green')
+btn5.place(x=50,y=150)
+
+btn6= tkinter.Button(frame1,text='Delete',height=1,width=6,fg='red')
+btn6.place(x=50,y=190)
+
+
+def read_list():
+
+    text2.delete(0.0, "end")
+    f = open("list.txt", 'r')
+    list_read = f.read()
+
+    print(list_read)
+    text2.insert(0.0, list_read)
+    text2.pack()
+
+# label = tkinter.Label(win, text=list_read, highlightcolor='white')
+# label.place(x=200,y=0)
+
+def countUp_start():
+
+    global write
+    write = 'S '+str(date)+' '+strtime
+    label = tkinter.Label(frame1, text= strtime, highlightcolor='white')
+    label.place(x=10, y=30)
+
+
+def reset_start():
+
+    global write
+    write = ''
+    label = tkinter.Label(frame1, text="                             ", highlightcolor='white')
+    label.place(x=10, y=30)
+
+
+def countUp_leave():
+
+    global write
+    write = 'L '+str(date)+' '+strtime
+    label = tkinter.Label(frame1, text=strtime, highlightcolor='white')
+    label.place(x=10, y=80)
+
+def reset_leave():
+
+    global write_leave
+    write_leave = ''
+    label = tkinter.Label(frame1, text="                             ", highlightcolor='white')
+    label.place(x=10, y=80)
+
+
+def data_reset():
+
+    text2.delete(0.0, "end")
+    text2.pack()
+
+    f = open("list.txt",'w')
+    f.close()
+
+def send():
+
+    global write
+
+    f = open("list.txt",'a')
+    f.write(write+'\n')
+
+    f.close()
+    read_list()
+
+
+btn1.config(command = countUp_start)
+btn2.config(command = reset_start)
+btn3.config(command = countUp_leave)
+btn4.config(command = reset_leave)
+btn5.config(command = send)
+btn6.config(command = data_reset)
+
+win.mainloop()
+
+# Mon : 0
+# Tue : 1
+# Wed : 2
+# Thu : 3
+# Fri : 4
+# Sat : 5
+# Sun : 6
