@@ -1,6 +1,6 @@
 
 --------------------------------------------------------------------
-# Objectives - Learn python through problem-solving
+# Learn python through problem-solving
 
 ## Tools
 + [Python3.11](https://www.python.org/downloads/)
