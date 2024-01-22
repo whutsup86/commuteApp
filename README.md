@@ -1,1 +1,3 @@
-# Objectives: Learn the Python and grow the way of thinking
+
+-----------------
+# Objectives: Solve the problem through Python
