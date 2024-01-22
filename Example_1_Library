@@ -1,0 +1,17 @@
+# Lesson 1 Library
+
+import bs4
+import requests
+
+
+url = "https://network.mobile.rakuten.co.jp/information/news/"
+res = requests.get(url, verify=True)
+print("status code:", res.status_code)
+
+soup = bs4.BeautifulSoup(res.text, "html.parser")
+soupnew = soup.find('custom-information-list')
+s = soupnew.select('a')
+
+for i in s:
+    print(i.text)
+
