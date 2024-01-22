@@ -11,7 +11,7 @@
 + (JP) How to install Python3 [link](https://prog-8.com/docs/python-env-win)
 + (JP) How to install Pycharm [link](https://sukkiri.jp/technologies/ides/pycharm/pycharm-win.html)
 + How to create the project
-+ How to use library
++ How to use library [example link](https://github.com/whutsup86/commuteApp/blob/main/Example_0_library)
 
 ## Lesson 1 : Sketch the program
 + Define the problem
