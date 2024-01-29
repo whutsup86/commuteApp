@@ -17,5 +17,5 @@
 ## Lesson 1 : Basics
 + List Tutorial [link](https://www.w3schools.com/python/python_lists.asp)
 + Dictionary Tutorial [link](https://www.w3schools.com/python/python_dictionaries.asp)
-+ For [link](https://www.w3schools.com/python/python_for_loops.asp)
-+ If [link](https://www.w3schools.com/python/python_conditions.asp)
++ For Tutorial [link](https://www.w3schools.com/python/python_for_loops.asp)
++ If Tutorial [link](https://www.w3schools.com/python/python_conditions.asp)
