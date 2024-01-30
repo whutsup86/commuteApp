@@ -1,5 +1,6 @@
 
 # 1. コメント -> CTRL + /
+
 '''
 コメント
 '''
@@ -12,33 +13,42 @@
 
 a = 1
 b = '1'
-print (a)
-print (b)
-print (str(a))
-print (int(a))
+c = "1"
+d =['leo','kenta']
+e =["leo","kenta"]
 
-#print (a+b) -> error
+# print (a)
+# print (b)
+# print (str(a))
+# print (int(a))
+# print (int(b))
 
-print (str(a)+b)
-print(a+int(b))
+#print (a+b) #-> error
+#print (a*b)
+
+# print (str(a)+b)
+# print(a+int(b))
 
 # 3. list
 
 fruits = ["apple", "banana", "cherry"]
-print(fruits)
-print(fruits[0])
-print(fruits[1])
+# print(fruits)
+# print(fruits[0])
+# print(fruits[1])
+# print(fruits[-1])
+# print(fruits[-2])
+# print(fruits[-3])
 
 fruits.append("pineapple")
 fruits.append("yakitori")
 fruits.insert(0,"mango")
 
-print(fruits)
+# print(fruits)
 fruits.remove(("yakitori"))
-print(fruits)
+# print(fruits)
 
 drinks = ['milk', 'coffee', 'cola', 'beer', 'highball']
-print(fruits+drinks)
+# print(fruits+drinks)
 
 # 4. dictionary
 
@@ -53,23 +63,23 @@ member_2={
 
 }
 
-print(member_1)
-print(member_2)
+# print(member_1)
+# print(member_2)
 
 member_1["name"]='leo'
 member_2["name"]='mogu'
 
-print(member_1)
-print(member_2)
+# print(member_1)
+# print(member_2)
 
 member_1.update({'name':'kenta'})
 
-print(member_1)
+# print(member_1)
 
 x = member_1.keys()
 y = member_1.values()
-print(x)
-print(y)
+# print(x)
+# print(y)
 
 member_3={"fruit":"peach","drink":"soju","name":"leo"}
 list = [member_1, member_2, member_3]
@@ -77,14 +87,14 @@ print(list)
 
 # 5. for
 
-for x in list:
-    print(x)
-
-for x in list:
-    print(x["name"])
-
-for x in list:
-    print(x["drink"])
+# for x in list:
+#     print(x)
+#
+# for x in list:
+#     print(x["name"])
+#
+# for x in list:
+#     print(x["drink"])
 
 
 # 6. if
@@ -114,6 +124,7 @@ if e == g:
 
 elif e < g:
     print ("e is less than g")
+
 else:
     print ("e is greater than or equal to g")
 
